@@ -1,12 +1,17 @@
 version: 2
 updates:
+
   - package-ecosystem: pip
     directory: /backend
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: npm
     directory: /frontend
+    cooldown:
+      default-days: 7
     schedule:
       interval: weekly
     cooldown:
